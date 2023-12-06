@@ -1,0 +1,143 @@
+.header-menu-button {
+	display: none;
+}
+.header-menu-mobile {
+	display: none;
+}
+@media screen and (max-width: 900px) {
+	.header {
+		height: 70px;
+	}
+	.header-logo img {
+		height: 40px;
+	}
+	.header-nav,
+	.header-contacts {
+		display: none;
+	}
+	.header-menu-button {
+		display: block;
+		width: 40px;
+		height: 40px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	.header-menu-button span {
+		display: block;
+		height: 4px;
+		background: black;
+		margin-bottom: 5px;
+
+		transition: transform .3s;
+	}
+	.header-menu-button span:last-child {
+		margin-bottom: 0;
+	}
+	.header.menu-open .header-menu-button span:nth-child(2) {
+		display: none;
+	}
+	.header.menu-open .header-menu-button span:nth-child(1) {
+		transform: rotate(45deg) translate(6px, 0);
+	}
+	.header.menu-open .header-menu-button span:nth-child(3) {
+		transform: rotate(-45deg) translate(6px, 0);
+	}
+
+	.header {
+		position: relative;
+	}
+	.header-menu-mobile {
+		display: none;
+		position: absolute;
+		top: 70px;
+		background: white;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+	}
+	.header.menu-open .header-menu-mobile {
+		display: block;
+	}
+	.header-menu-mobile-nav {
+		margin-bottom: 30px;
+	}
+	.header-menu-mobile-nav a {
+		display: block;
+		color: #000;
+		margin-bottom: 10px;
+	}
+
+	.main {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.main-left h1 {
+		font-size: 30px;
+	}
+	.main-left p {
+		font-size: 16px;
+	}
+	.main-button {
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+	.main-right {
+		display: none;
+	}
+	.main-left {
+		flex-basis: 100%;
+	}
+
+	.welcome {
+		padding: 50px 0;
+	}
+	.welcome .container {
+		flex-direction: column;
+		gap: 30px
+	}
+	.welcome h2 {
+		font-size: 24px;
+	}
+	.welcome-content {
+		font-size: 16px;
+	}
+
+	.products {
+		padding: 50px 0;
+	}
+	.products h2 {
+		font-size: 24px;
+	}
+	.products-list {
+		flex-direction: column;
+		gap: 30px;
+		text-align: center;
+	}
+	.products-item img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.products-title {
+		font-size: 20px;
+	}
+	.products-item p {
+		font-size: 14px;
+	}
+
+	.footer-contacts {
+		flex-direction: column;
+		gap: 30px;
+		padding-bottom: 20px;
+		font-size: 16px;
+	}
+	.footer-contacts-title {
+		font-size: 18px;
+	}
+	.footer-copy {
+		font-size: 14px;
+	}
+}
